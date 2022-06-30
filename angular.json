@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "dynamic": "apps/dynamic",
+    "dynamic-e2e": "apps/dynamic-e2e",
+    "wrapper": "libs/wrapper"
+  }
+}
