@@ -3,6 +3,6 @@ npm install
 
 # run the app
 nx serve dynamic
-
+Cancel changes
 # run the storybook
-nx g @nrwl/angular:storybook-configuration dynamic
+nx run dynamic:storybook
