@@ -839,6 +839,7 @@ nx affected:e2e</pre>
         </p>
       </div>
     </div>
+    
   `,
   styles: [],
   encapsulation: ViewEncapsulation.None,

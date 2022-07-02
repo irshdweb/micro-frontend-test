@@ -3,17 +3,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 /* eslint-disable */
 
 @Component({
-  selector: 'my-org-nx-welcome',
+  selector: 'my-org-test',
   template: `
-   This is dummy component
+   djdjjjjjjjjjjjjjjjjjjjjjjj
   `,
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent implements OnInit {
+export class NxTestComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  
 }

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  
   form:any;
   model: any;
   options: any;
@@ -45,6 +46,15 @@ export class AppComponent {
         ],
       },
     },
+    {
+      key: 'email',
+      type: 'input',
+      templateOptions: {
+        label: 'Email address',
+        placeholder: 'Enter email',
+        required: true,
+      }
+    }
   ];
 
   receiveChildData(data:any){

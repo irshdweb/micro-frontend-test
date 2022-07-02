@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { WrapperModule } from '@my-org/wrapper';
+import { NxTestComponent } from './nx-test.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent, NxWelcomeComponent, NxTestComponent],
   imports: [
     BrowserModule,
     WrapperModule

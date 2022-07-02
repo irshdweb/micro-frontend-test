@@ -6,6 +6,7 @@
     "dynamic-e2e": "apps/dynamic-e2e",
     "main": "apps/main",
     "main-e2e": "apps/main-e2e",
-    "wrapper": "libs/wrapper"
+    "wrapper": "libs/wrapper",
+    "wrapper-e2e": "apps/wrapper-e2e"
   }
 }
