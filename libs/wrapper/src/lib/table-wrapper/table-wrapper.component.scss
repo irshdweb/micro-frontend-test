@@ -1,0 +1,30 @@
+::ng-deep.form-group{
+    max-width: 600px;
+    width: 100%;
+    margin:0 20px 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    label{
+        width: 100%;
+    }
+    .form-control{
+        width: 100%;
+        height: 40px;
+        border:1px solid #a1a1a1;
+        border-radius: 5px;
+        &[multiple]{
+            height: 100px;
+        }
+    }
+}
+
+::ng-deep.btn{
+    margin-top: 15px;
+    &.btn-primary{
+        background-color: #1176cf;
+        padding: 8px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        margin-left: 20px;
+    }
+}
