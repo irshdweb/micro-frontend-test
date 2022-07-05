@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { FormlyModule} from '@ngx-formly/core';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
@@ -19,7 +18,6 @@ export default {
         CommonModule,
         ReactiveFormsModule,
         FormlyModule.forRoot(),
-        FormlyBootstrapModule,
       ],
     })
   ],
@@ -34,38 +32,12 @@ export const Primary = Template.bind({});
 Primary.args = {
   fields: [
     {
-      key: 'Select',
-      type: 'select',
+      key: 'gender',
+      type: 'radio',
       templateOptions: {
-        label: 'Select',
-        placeholder: 'Placeholder',
-        description: 'Description',
-        required: true,
-        options: [
-          { value: 1, label: 'Option 1' },
-          { value: 2, label: 'Option 2'  },
-          { value: 3, label: 'Option 3'  },
-          { value: 4, label: 'Option 4', disabled: true },
-        ],
-      },
-    },
-    {
-      key: 'select_multi',
-      type: 'select',
-      templateOptions: {
-        label: 'Select Multiple',
-        placeholder: 'Placeholder',
-        description: 'Description',
-        required: true,
-        multiple: true,
-        selectAllOption: 'Select All',
-        options: [
-          { value: 1, label: 'Option 1' },
-          { value: 2, label: 'Option 2'  },
-          { value: 3, label: 'Option 3'  },
-          { value: 4, label: 'Option 4', disabled: true },
-        ],
-      },
+        name: 'gender',
+        options: [{ value: 'Male', key: 'M' }, { value: 'Female', key: 'F' }, { value: 'None', key: 'N' }]
+      }
     },
     {
       key: 'email',

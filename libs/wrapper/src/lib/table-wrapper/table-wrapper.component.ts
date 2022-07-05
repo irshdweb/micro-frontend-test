@@ -15,7 +15,7 @@ export class TableWrapperComponent implements OnInit {
   @Input() model = {};
   @Input() options:FormlyFormOptions = {};
   @Input() fields:FormlyFieldConfig[] = [];
-  @Output() outputFromChild : EventEmitter<{}> = new EventEmitter();
+  @Output() outputFromChild : EventEmitter<any> = new EventEmitter();
   onSubmit(model:object) {
     this.outputFromChild.emit(model);
   }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'my-org-root',
@@ -8,43 +9,19 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   
-  form:any;
-  model: any;
-  options: any;
+  form!: FormGroup;
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  model!: {};
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  options!: {};
   fields = [
     {
-      key: 'Select',
-      type: 'select',
+      key: 'gender',
+      type: 'radio',
       templateOptions: {
-        label: 'Select',
-        placeholder: 'Placeholder',
-        description: 'Description',
-        required: true,
-        options: [
-          { value: 1, label: 'Option 1' },
-          { value: 2, label: 'Option 2'  },
-          { value: 3, label: 'Option 3'  },
-          { value: 4, label: 'Option 4', disabled: true },
-        ],
-      },
-    },
-    {
-      key: 'select_multi',
-      type: 'select',
-      templateOptions: {
-        label: 'Select Multiple',
-        placeholder: 'Placeholder',
-        description: 'Description',
-        required: true,
-        multiple: true,
-        selectAllOption: 'Select All',
-        options: [
-          { value: 1, label: 'Option 1' },
-          { value: 2, label: 'Option 2'  },
-          { value: 3, label: 'Option 3'  },
-          { value: 4, label: 'Option 4', disabled: true },
-        ],
-      },
+        name: 'gender',
+        options: [{ value: 'Male', key: 'M' }, { value: 'Female', key: 'F' }, { value: 'None', key: 'N' }]
+      }
     },
     {
       key: 'email',
@@ -57,7 +34,7 @@ export class AppComponent {
     }
   ];
 
-  receiveChildData(data:any){
+  receiveChildData(data:string){
     console.log(data);
   }
 }
