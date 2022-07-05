@@ -11,12 +11,12 @@ export class TableWrapperComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  @Input() form: any = new FormGroup({});
-  @Input() model:any = {};
+  @Input() form = new FormGroup({});
+  @Input() model = {};
   @Input() options:FormlyFormOptions = {};
   @Input() fields:FormlyFieldConfig[] = [];
-  @Output() outputFromChild : EventEmitter<string> = new EventEmitter();
-  onSubmit(model: any) {
+  @Output() outputFromChild : EventEmitter<{}> = new EventEmitter();
+  onSubmit(model:object) {
     this.outputFromChild.emit(model);
   }
 }
