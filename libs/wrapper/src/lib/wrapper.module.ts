@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyFieldInput } from './table-wrapper/controlls/formly-field-input';
 import { FormlyFieldRadio } from './table-wrapper/controlls/formly-field-radio';
+import { FormlyFieldSelect } from './table-wrapper/controlls/formly-field-select';
 
 @NgModule({
   imports: [
@@ -12,8 +13,9 @@ import { FormlyFieldRadio } from './table-wrapper/controlls/formly-field-radio';
     ReactiveFormsModule,
     FormlyModule.forRoot({
       types: [
-        { name: 'input', component: FormlyFieldInput },
-        { name: 'radio', component: FormlyFieldRadio }
+        { name: 'input', component: FormlyFieldInput},
+        { name: 'radio', component: FormlyFieldRadio },
+        { name: 'select', component: FormlyFieldSelect }
       ],
     }),
   ],
@@ -21,6 +23,6 @@ import { FormlyFieldRadio } from './table-wrapper/controlls/formly-field-radio';
     TableWrapperComponent,
     FormlyFieldInput, FormlyFieldRadio
   ],
-  declarations: [TableWrapperComponent, FormlyFieldInput, FormlyFieldRadio],
+  declarations: [TableWrapperComponent, FormlyFieldInput, FormlyFieldRadio, FormlyFieldSelect],
 })
 export class WrapperModule {}

@@ -16,11 +16,11 @@ export class AppComponent {
   options!: {};
   fields = [
     {
-      key: 'gender',
+      key: 'Radio',
       type: 'radio',
       templateOptions: {
         name: 'gender',
-        options: [{ value: 'Male', key: 'M' }, { value: 'Female', key: 'F' }, { value: 'None', key: 'N' }]
+        options: [{ value: 'Male', key: 'M' }, { value: 'Female', key: 'F' }]
       }
     },
     {
@@ -28,10 +28,26 @@ export class AppComponent {
       type: 'input',
       templateOptions: {
         label: 'Email address',
-        placeholder: 'Enter email',
+        placeholder: 'Enter email address',
         required: true,
       }
-    }
+    },
+    {
+      key: 'Select',
+      type: 'select',
+      templateOptions: {
+        label: 'Select',
+        placeholder: 'Placeholder',
+        description: 'Description',
+        required: true,
+        options: [
+          { value: 1, label: 'Option 1' },
+          { value: 2, label: 'Option 2'  },
+          { value: 3, label: 'Option 3'  },
+          { value: 4, label: 'Option 4', disabled: true },
+        ],
+      },
+    },
   ];
 
   receiveChildData(data:string){
