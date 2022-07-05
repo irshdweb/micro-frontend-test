@@ -18,7 +18,8 @@ import { FormlyFieldRadio } from './table-wrapper/controlls/formly-field-radio';
     }),
   ],
   exports: [
-    TableWrapperComponent
+    TableWrapperComponent,
+    FormlyFieldInput, FormlyFieldRadio
   ],
   declarations: [TableWrapperComponent, FormlyFieldInput, FormlyFieldRadio],
 })
